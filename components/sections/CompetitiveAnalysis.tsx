@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import SectionWrapper from "../ui/SectionWrapper";
-import Card from "../ui/Card";
-import CompetitorBarChart from "../charts/CompetitorBarChart";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import Card from "@/components/ui/Card";
+import CompetitorBarChart from "@/components/charts/CompetitorBarChart";
 import { competitorWins, competitorLosses } from "@/data/competitors";
 
 export default function CompetitiveAnalysis() {

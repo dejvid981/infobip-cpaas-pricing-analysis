@@ -1,3 +1,5 @@
+"use client";
+
 import { rcsRates, rcsFactors } from "@/data/rcsRates";
 import InsightCard from "@/components/ui/InsightCard";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { viberRates, viberProfitability } from "@/data/viberRates";
 import InsightCard from "@/components/ui/InsightCard";
 

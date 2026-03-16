@@ -31,7 +31,16 @@ export default function RegionalProfitabilityTable() {
           {regionalProfitability.map((row, i) => (
             <Fragment key={row.region}>
               <tr
+                role="button"
+                tabIndex={0}
+                aria-expanded={expanded === i}
                 onClick={() => setExpanded(expanded === i ? null : i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setExpanded(expanded === i ? null : i);
+                  }
+                }}
                 className="border-b border-dark-border/50 hover:bg-dark-border/30 transition cursor-pointer"
               >
                 <td className="py-3 px-4 text-text-primary font-medium">{row.region}</td>

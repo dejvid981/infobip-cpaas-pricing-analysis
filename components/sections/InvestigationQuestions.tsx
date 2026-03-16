@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SectionWrapper from "../ui/SectionWrapper";
-import Card from "../ui/Card";
-import { investigationQuestions } from "../../data/scenarios";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import Card from "@/components/ui/Card";
+import { investigationQuestions } from "@/data/scenarios";
 
 const iconMap: Record<string, string> = {
   Route: "🛤️",

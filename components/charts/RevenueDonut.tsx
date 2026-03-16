@@ -1,8 +1,9 @@
 "use client";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { enterpriseScenario } from "@/data/scenarios";
+import { COLORS } from "@/lib/colors";
 
-const COLORS = ["#FF6B00", "#FF8C38", "#FFB380", "#E05500", "#CC4D00", "#FF9F5A"];
+const DONUT_COLORS = [COLORS.accent, COLORS.accentLight, "#FFB380", "#E05500", "#CC4D00", "#FF9F5A"];
 
 interface CustomTooltipProps {
   active?: boolean;
@@ -48,7 +49,7 @@ export default function RevenueDonut() {
           animationDuration={800}
         >
           {data.map((_, i) => (
-            <Cell key={i} fill={COLORS[i % COLORS.length]} />
+            <Cell key={i} fill={DONUT_COLORS[i % DONUT_COLORS.length]} />
           ))}
         </Pie>
         <Tooltip content={<CustomTooltip />} />
@@ -57,7 +58,7 @@ export default function RevenueDonut() {
           y="48%"
           textAnchor="middle"
           dominantBaseline="central"
-          className="fill-text-primary text-xl font-bold"
+          style={{ fill: "#E8E9ED", fontSize: "24px", fontWeight: "bold" }}
         >
           $248K
         </text>
@@ -66,7 +67,7 @@ export default function RevenueDonut() {
           y="58%"
           textAnchor="middle"
           dominantBaseline="central"
-          className="fill-text-muted text-xs"
+          style={{ fill: "#8B8FA3", fontSize: "12px" }}
         >
           Total Revenue
         </text>

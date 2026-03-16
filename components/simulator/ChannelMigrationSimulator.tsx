@@ -11,6 +11,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import { useChannelMigration, regions } from "@/hooks/useChannelMigration";
+import { COLORS } from "@/lib/colors";
 
 interface ChartTooltipProps {
   active?: boolean;
@@ -100,31 +101,31 @@ export default function ChannelMigrationSimulator() {
       {/* Chart */}
       <ResponsiveContainer width="100%" height={200}>
         <AreaChart data={chartData} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1E2235" />
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.darkBorder} />
           <XAxis
             dataKey="smsPercent"
-            tick={{ fill: "#8B8FA3", fontSize: 11 }}
+            tick={{ fill: COLORS.textMuted, fontSize: 11 }}
             tickFormatter={(v: number) => `${v}%`}
           />
-          <YAxis tick={{ fill: "#8B8FA3", fontSize: 11 }} tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}K`} />
+          <YAxis tick={{ fill: COLORS.textMuted, fontSize: 11 }} tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}K`} />
           <Tooltip content={<ChartTooltip />} />
           <Area
             type="monotone"
             dataKey="revenue"
             name="Revenue"
-            stroke="#FF6B00"
-            fill="#FF6B00"
+            stroke={COLORS.accent}
+            fill={COLORS.accent}
             fillOpacity={0.2}
           />
           <Area
             type="monotone"
             dataKey="margin"
             name="Margin"
-            stroke="#22C55E"
-            fill="#22C55E"
+            stroke={COLORS.marginHigh}
+            fill={COLORS.marginHigh}
             fillOpacity={0.2}
           />
-          <ReferenceLine x={smsPercent} stroke="#FF6B00" strokeDasharray="4 4" strokeWidth={2} />
+          <ReferenceLine x={smsPercent} stroke={COLORS.accent} strokeDasharray="4 4" strokeWidth={2} />
         </AreaChart>
       </ResponsiveContainer>
 

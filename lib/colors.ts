@@ -1,0 +1,16 @@
+export const COLORS = {
+  accent: "#FF6B00",
+  accentLight: "#FF8C38",
+  textPrimary: "#E8E9ED",
+  textMuted: "#8B8FA3",
+  darkCard: "#161929",
+  darkBorder: "#1E2235",
+  darkPrimary: "#0D0F1A",
+  marginHigh: "#22C55E",
+  marginMedium: "#EAB308",
+  marginLow: "#EF4444",
+  twilioGrey: "#4A4E69",
+  sinchTeal: "#14B8A6",
+  vonagePurple: "#8B5CF6",
+  indigoBlue: "#6366F1",
+} as const;

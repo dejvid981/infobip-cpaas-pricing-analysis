@@ -1,3 +1,5 @@
+"use client";
+
 import { smsRates, smsVolumeDiscounts } from "@/data/smsRates";
 import MarginBadge from "@/components/ui/MarginBadge";
 import InsightCard from "@/components/ui/InsightCard";

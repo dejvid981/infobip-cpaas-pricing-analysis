@@ -1,3 +1,5 @@
+"use client";
+
 import { whatsappBaseRates, whatsappMarkup } from "@/data/whatsappRates";
 import InsightCard from "@/components/ui/InsightCard";
 

@@ -22,7 +22,7 @@ export default function Hero() {
               <stop offset="100%" stopColor="#FF8C38" />
             </linearGradient>
             <linearGradient id="fillGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#FF6B00" stopOpacity="0.05" />
+              <stop offset="0%" stopColor="#FF6B00" stopOpacity="0.1" />
               <stop offset="100%" stopColor="#FF6B00" stopOpacity="0" />
             </linearGradient>
           </defs>
@@ -40,7 +40,7 @@ export default function Hero() {
             fill="none"
             stroke="url(#strokeGradient)"
             strokeWidth="2"
-            opacity="0.1"
+            opacity="0.35"
             strokeLinecap="round"
             strokeLinejoin="round"
             className="animate-[drawLine_3s_ease-in-out_forwards]"
@@ -67,7 +67,7 @@ export default function Hero() {
         </h2>
 
         <p className="text-lg text-text-muted mt-4 max-w-2xl text-center">
-          Modeling messaging economics across SMS, WhatsApp, RCS &amp; Viber for 13
+          Modeling messaging economics across SMS, WhatsApp, RCS & Viber for 13
           markets
         </p>
 
@@ -78,6 +78,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
+        aria-label="Scroll down"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

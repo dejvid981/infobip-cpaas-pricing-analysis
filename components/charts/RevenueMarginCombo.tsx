@@ -10,6 +10,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import { enterpriseScenario } from "@/data/scenarios";
+import { COLORS } from "@/lib/colors";
 
 interface CustomTooltipProps {
   active?: boolean;
@@ -43,28 +44,28 @@ export default function RevenueMarginCombo() {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <ComposedChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 40 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#1E2235" />
+        <CartesianGrid strokeDasharray="3 3" stroke={COLORS.darkBorder} />
         <XAxis
           dataKey="name"
-          tick={{ fill: "#8B8FA3", fontSize: 11 }}
+          tick={{ fill: COLORS.textMuted, fontSize: 11 }}
           angle={-30}
           textAnchor="end"
           interval={0}
         />
         <YAxis
           yAxisId="left"
-          tick={{ fill: "#8B8FA3", fontSize: 11 }}
+          tick={{ fill: COLORS.textMuted, fontSize: 11 }}
           tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}K`}
         />
         <YAxis
           yAxisId="right"
           orientation="right"
-          tick={{ fill: "#8B8FA3", fontSize: 11 }}
+          tick={{ fill: COLORS.textMuted, fontSize: 11 }}
           tickFormatter={(v: number) => `${v}%`}
           domain={[0, 100]}
         />
         <Tooltip content={<CustomTooltip />} />
-        <Bar yAxisId="left" dataKey="revenue" name="Revenue" fill="#FF6B00" radius={[4, 4, 0, 0]} />
+        <Bar yAxisId="left" dataKey="revenue" name="Revenue" fill={COLORS.accent} radius={[4, 4, 0, 0]} />
         <Line
           yAxisId="right"
           type="monotone"

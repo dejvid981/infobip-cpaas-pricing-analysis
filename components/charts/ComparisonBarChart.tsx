@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   Legend,
 } from "recharts";
+import { COLORS } from "@/lib/colors";
 
 interface DataPoint {
   country: string;
@@ -72,7 +73,7 @@ export default function ComparisonBarChart({ data }: Props) {
           <Bar
             dataKey="infobip"
             name="Infobip"
-            fill="#FF6B00"
+            fill={COLORS.accent}
             radius={[0, 4, 4, 0]}
             isAnimationActive
             animationDuration={800}
@@ -80,7 +81,7 @@ export default function ComparisonBarChart({ data }: Props) {
           <Bar
             dataKey="twilio"
             name="Twilio"
-            fill="#4A4E69"
+            fill={COLORS.twilioGrey}
             radius={[0, 4, 4, 0]}
             isAnimationActive
             animationDuration={800}

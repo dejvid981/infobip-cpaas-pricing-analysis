@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   Legend,
 } from "recharts";
+import { COLORS } from "@/lib/colors";
 
 const data = [
   { dimension: "Price Advantage", infobip: 90, twilio: 60, sinch: 75, vonage: 55 },
@@ -69,7 +70,7 @@ export default function CompetitorBarChart() {
           <Bar
             dataKey="infobip"
             name="Infobip"
-            fill="#FF6B00"
+            fill={COLORS.accent}
             radius={[0, 4, 4, 0]}
             isAnimationActive
             animationDuration={800}
@@ -77,7 +78,7 @@ export default function CompetitorBarChart() {
           <Bar
             dataKey="twilio"
             name="Twilio"
-            fill="#6366F1"
+            fill={COLORS.indigoBlue}
             radius={[0, 4, 4, 0]}
             isAnimationActive
             animationDuration={800}
@@ -86,7 +87,7 @@ export default function CompetitorBarChart() {
           <Bar
             dataKey="sinch"
             name="Sinch"
-            fill="#14B8A6"
+            fill={COLORS.sinchTeal}
             radius={[0, 4, 4, 0]}
             isAnimationActive
             animationDuration={800}
@@ -95,7 +96,7 @@ export default function CompetitorBarChart() {
           <Bar
             dataKey="vonage"
             name="Vonage"
-            fill="#8B5CF6"
+            fill={COLORS.vonagePurple}
             radius={[0, 4, 4, 0]}
             isAnimationActive
             animationDuration={800}
